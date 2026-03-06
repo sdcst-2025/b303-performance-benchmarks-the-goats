@@ -8,20 +8,20 @@ class sorttest():
         for i in range(0,self.x):
             l.append(i)
         random.shuffle(l)
-        file.write(f'l = {l}')
+        file.write(f'{l}')
     def bestsort(self):
         file = open(self.bestname,'w')
         l =[]
         for i in range(0,self.x):
             l.append(i)    
-        file.write(f'l = {l}')
+        file.write(f'{l}')
     def worstsort(self):
         file = open(self.worstname, 'w')       
         l = []
         for i in range(0,self.x):
             l.append(i)  
         l.reverse()
-        file.write(f'l = {l}')        
+        file.write(f'{l}')        
     """def sortcode(self):
         import data10000 as d
 
