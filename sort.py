@@ -6,41 +6,41 @@ def sortcode():
     importedb = f.readline()
     x = json.loads(importedb)
     
-    start = time.time()
+    start = time.perf_counter()
     for k in range(len(x)):
         for j in range(k, len(x)):
             if x[k] > x[j]:
                 temp = x[k]
                 x[k] = x[j]
                 x[j] = temp
-    end = time.time()
+    end = time.perf_counter()
     #f.write('sorted')
     elapsed = end - start
     print("\n\n")
-    print(f"Best took {elapsed:.100f} seconds")
+    print(f"Best took {elapsed:.10f} seconds")
 
     f = open(f"{n}tdata.py","r")
     importedb = f.readline()
     x = json.loads(importedb)
     
-    start = time.time()
+    start = time.perf_counter()
     for k in range(len(x)):
         for j in range(k, len(x)):
             if x[k] > x[j]:
                 temp = x[k]
                 x[k] = x[j]
                 x[j] = temp
-    end = time.time()
+    end = time.perf_counter()
     #f.write('sorted')
     elapsed = end - start
     print("\n\n")
-    print(f"Random took {elapsed:.100f} seconds")
+    print(f"Random took {elapsed:.10f} seconds")
 
     f = open(f"{n}tworst.py","r")
     importedb = f.readline()
     x = json.loads(importedb)
     
-    start = time.time()
+    start = time.perf_counter()
     #print(d.data)
     for k in range(len(x)):
         for j in range(k, len(x)):
@@ -48,10 +48,10 @@ def sortcode():
                 temp = x[k]
                 x[k] = x[j]
                 x[j] = temp
-    end = time.time()
+    end = time.perf_counter()
     #f.write('sorted')
     elapsed = end - start
     print("\n\n")
-    print(f"Worst took {elapsed:.100f} seconds")
+    print(f"Worst took {elapsed:.10f} seconds")
 
 sortcode()
